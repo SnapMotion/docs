@@ -46,52 +46,86 @@ Example: `mintlify`
   </Expandable>
 </ResponseField>
 
-```ts
-snapmotion.do({
-  action: "ADD_SCENE",
-});
-```
-
 ## Actions
 
 Manage scenes should be easy. Here are the actions you can use to manage your scenes.
 
-#### `SCENE_CREATE`
+#### Create a scene
 
 Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
 
 ```ts
 snapmotion.do({
-  action: "ADD_SCENE",
+  action: "SCENE_CREATE",
 });
 ```
 
-#### `SCENE_UPDATE`
+#### Duplicate a scene
 
 Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
 
 ```ts
 snapmotion.do({
-  action: "ADD_SCENE",
+  action: "SCENE_UPDATE",
 });
 ```
 
-#### `SCENE_DELETE`
+#### Delete a scene
 
 Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
 
 ```ts
 snapmotion.do({
-  action: "ADD_SCENE",
+  action: "SCENE_DELETE",
 });
 ```
 
-#### `SCENE_DUPLICATE`
+#### Set scene preview
 
 Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
 
 ```ts
 snapmotion.do({
-  action: "ADD_SCENE",
+  action: "SET_SCENE_PREVIEW",
+});
+```
+
+#### Scene to JSON
+
+Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
+
+```ts
+snapmotion.do({
+  action: "SCENE_TO_JSON",
+});
+```
+
+#### Scene to PDF
+
+Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
+
+```ts
+snapmotion.do({
+  action: "SCENE_TO_PDF",
+});
+```
+
+#### Scene to PNG
+
+Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
+
+```ts
+snapmotion.do({
+  action: "SCENE_TO_PNG",
+});
+```
+
+#### Scene to SVG
+
+Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
+
+```ts
+snapmotion.do({
+  action: "SCENE_TO_SVG",
 });
 ```
