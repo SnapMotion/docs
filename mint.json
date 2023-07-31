@@ -54,11 +54,12 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["introduction", "quickstart", "installation", "usage"]
     },
     {
       "group": "Essentials",
       "pages": [
+        "essentials/scenes",
         "essentials/markdown",
         "essentials/code",
         "essentials/images",

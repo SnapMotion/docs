@@ -1,0 +1,97 @@
+---
+title: "Scenes"
+description: "Scenes are the building blocks of your design. It act as a container for multiple layers"
+icon: "image"
+---
+
+<Tip>
+
+SnapMotion scenes can be used to create poweful presentations, or just multiple version for the same product.
+
+</Tip>
+
+<img
+  style={{ borderRadius: "0.5rem" }}
+  src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
+/>
+
+## Properties
+
+<ResponseField name="id" type="string" required>
+Unique  identifier for the scene. Used to reference the scene in other actions.
+
+Example: `mintlify`
+
+</ResponseField>
+
+<ResponseField name="name" type="string" required>
+Name of your project. Used for the global title.
+
+Example: `mintlify`
+
+</ResponseField>
+
+<ResponseField name="logo" type="string or object">
+  Path to logo image or object with path to "light" and "dark" mode logo images
+  <Expandable title="Logo">
+    <ResponseField name="light" type="string">
+      Path to the logo in light mode
+    </ResponseField>
+    <ResponseField name="dark" type="string">
+      Path to the logo in dark mode
+    </ResponseField>
+    <ResponseField name="href" type="string" default="/">
+      Where clicking on the logo links you to
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+```ts
+snapmotion.do({
+  action: "ADD_SCENE",
+});
+```
+
+## Actions
+
+Manage scenes should be easy. Here are the actions you can use to manage your scenes.
+
+#### `SCENE_CREATE`
+
+Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
+
+```ts
+snapmotion.do({
+  action: "ADD_SCENE",
+});
+```
+
+#### `SCENE_UPDATE`
+
+Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
+
+```ts
+snapmotion.do({
+  action: "ADD_SCENE",
+});
+```
+
+#### `SCENE_DELETE`
+
+Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
+
+```ts
+snapmotion.do({
+  action: "ADD_SCENE",
+});
+```
+
+#### `SCENE_DUPLICATE`
+
+Adds a new layer to the scene. The layer parameter is an instance of the Layer object representing the graphical elements to be added.
+
+```ts
+snapmotion.do({
+  action: "ADD_SCENE",
+});
+```
