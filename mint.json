@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit Docs",
+  "name": "SnapMotion docs",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -20,12 +20,12 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
+      "name": "Github",
       "url": "mailto:hi@mintlify.com"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
+    "name": "Try demo editor",
     "url": "https://dashboard.mintlify.com"
   },
   "tabs": [
@@ -53,18 +53,25 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "installation", "usage"]
+      "group": "Gettting Started",
+      "pages": [
+        "overview",
+        "introduction",
+        "quickstart",
+        "installation",
+        "usage"
+      ]
     },
     {
-      "group": "Essentials",
+      "group": "Components",
       "pages": [
         "essentials/scenes",
         "essentials/markdown",
         "essentials/code",
         "essentials/images",
         "essentials/settings",
-        "essentials/navigation"
+        "essentials/navigation",
+        "essentials/history"
       ]
     },
     {

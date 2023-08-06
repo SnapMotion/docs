@@ -1,0 +1,34 @@
+---
+title: "History"
+description: "History enables reusable undo/redo capabilities for SnapMotion scenes"
+icon: "image"
+---
+
+<img
+  style={{ borderRadius: "0.5rem" }}
+  src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
+/>
+
+## Actions
+
+Manage history for each scene. The actions will be applied for the current scene
+
+#### Undo
+
+Undoes the last change to the active scene state.
+
+```ts
+snapmotion.do({
+  action: "HISTORY_UNDO",
+});
+```
+
+#### Redo
+
+Redoes the last undone change to the active scene state.
+
+```ts
+snapmotion.do({
+  action: "HISTORY_REDO",
+});
+```
