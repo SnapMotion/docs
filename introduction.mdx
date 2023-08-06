@@ -1,71 +1,56 @@
 ---
 title: Introduction
-description: "Seamless multimedia editing for your app - Unleash creativity effortlessly."
+description: "What is SnapMotion?"
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.svg"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.svg"
-  alt="Hero Dark"
-/>
+SnapMotion is an SDK for building design editors. While there are many powerful JavaScript frameworks and tools that can help you make a canvas editor, almost all of them are “low-level” and would require writing a lot of code to build a full-featured canvas editor app.
 
-## Setting up
+## Features
 
-SnapMotion is an SDK for building design editors. The main entry point is the SnapMotion class in src/snapmotion/SnapMotion.ts.
+Here are some key features I would highlight for Snapmotion as an SDK for creating graphic and video editors:
 
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
+- **Canvas Rendering** - Provides a flexible canvas via FabricJS for rendering graphics/video and handling user interactions.
 
-## Make it yours
+- **Scene Management** - Allows building editors with multiple scenes/pages for designs and storyboards.
 
-Update your docs to your brand and add valuable content for the best user conversion.
+- **Object Primitives** - APIs for easily adding and manipulating different object types like text, shapes, images.
 
-<CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/components/accordion"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/showcase"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+- **History Support** - Robust undo/redo capabilities to edit designs and sequences.
+
+- **Media Support** - APIs for importing, manipulating, and exporting media assets.
+
+- **Animation Tools** - Timeline, keyframes, and other tools for creating animations and sequences.
+
+- **Cross-Platform** - Support for building web, mobile, and desktop editors using React and Electron.
+
+- **Intuitive UI** - Canvas interactions, components, and guides to enable intuitive creation interfaces.
+
+## Structure
+
+A SnapMotion editor contains the following Structure:
+
+- **Design** - Represents the full design document. Contains multiple scenes.
+- **Scene** - A single page or artboard in the design. Contains design objects.
+- **History** - Tracks changes to scenes to enable undo/redo capabilities.
+- **Canvas** - Renders scenes using FabricJS canvas.
+- **State** - Global state management for editor data.
+
+## How it works
+
+At a high level, SnapMotion provides a central SnapMotion class that orchestrates the core editor components and functionality.
+
+When creating a new SnapMotion instance, it initializes the Canvas, sets up the State module, and loads the initial design data.
+
+The do() method is used to dispatch actions, which call the corresponding action handler methods on the SnapMotion instance. For example:
+
+```ts
+snapMotion.do({
+  action: "CREATE_SCENE",
+});
+```
+
+This would call the `CREATE_SCENE` method on SnapMotion to handle creating a new scene.
+
+The EventsManager is used to listen for and handle events from the Canvas and other sources.
+
+The State module provides centralized state management for the editor data.
